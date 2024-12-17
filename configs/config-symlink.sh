@@ -1,42 +1,45 @@
 #!/bin/bash
+# Script to symlink config files
+# By: LRBM
 
-# Paths
-SOURCE_BASHRC="$HOME/.dotfiles-swayzy/configs/bash/.bashrc"
-TARGET_BASHRC="$HOME/.bashrc"
+set -e  # Exit on any error
 
-SOURCE_ALACRITTY="$HOME/.dotfiles/configs/alacritty/allacritty.yml"
-TARGET_ALACRITTY="$HOME/.config/alacritty/allacritty.yml"
-
-# Function to create a symlink
-create_symlink() {
-  local source="$1"
-  local target="$2"
-
-  if [ -L "$target" ]; then
-    echo "Symlink already exists: $target -> $(readlink "$target")"
-  elif [ -f "$target" ]; then
-    echo "Warning: $target already exists as a regular file."
-    read -p "Do you want to replace it with a symlink? (y/n): " confirm
-    if [ "$confirm" != "y" ]; then
-      echo "Skipping $target"
-      return
+# Function to remove existing configurations
+remove_existing() {
+    local target="$1"
+    if [ -e "$target" ] || [ -L "$target" ]; then
+        echo "Removing existing $target..."
+        rm -rf "$target"
     fi
-
-    # Backup the original target
-    mv "$target" "$target.backup"
-    echo "Backup created: $target.backup"
-  fi
-
-  # Create the symlink
-  ln -s "$source" "$target"
-  echo "Symlink created: $target -> $source"
 }
 
-# Symlink .bashrc
-create_symlink "$SOURCE_BASHRC" "$TARGET_BASHRC"
+# Remove existing configurations
+remove_existing ~/.bashrc
+remove_existing ~/.config/alacritty
+remove_existing ~/.config/sway
+remove_existing ~/.config/tmux
+remove_existing ~/.vimrc
 
-# Symlink Alacritty config
-create_symlink "$SOURCE_ALACRITTY" "$TARGET_ALACRITTY"
+# Configuration Files Symlinking
 
-# Nice work
-echo "Buenos!"
+# Alacritty
+ln -sf ~/.dotfiles-swayzy/configs/alacritty ~/.config/
+echo "Old Alacritty configs removed and symlink created."
+
+# bash
+ln -sf ~/.dotfiles-swayzy/configs/bash/.bashrc ~/.bashrc
+echo "Old .bashrc removed and symlink created."
+
+# Tmux
+ln -sf ~/.dotfiles-swayzy/configs/sway ~/.config/
+echo "Old tmux.conf removed and symlink created."
+
+# Tmux
+ln -sf ~/.dotfiles-swayzy/configs/tmux ~/.config
+echo "Old tmux.conf removed and symlink created."
+
+# Vim
+ln -sf ~/.dotfiles-swayzy/configs/vim/.vimrc ~/.vimrc
+echo "Old vim configs removed and symlink created."
+
+echo "All configuration files symlinked and plugins installed successfully."
