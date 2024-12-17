@@ -25,7 +25,8 @@ env:
     # each instance of Alacritty. If it is not present, alacritty will
     # check the local terminfo database and use `alacritty` if it is
     # available, otherwise `xterm-256color` is used.
-    TERM: alacritty
+    # TERM: alacritty
+    TERM: xterm-256color
 
     # This is to fix weird font scaling on X11
     # Solution: https://github.com/alacritty/alacritty/issues/1501#issuecomment-614867213
