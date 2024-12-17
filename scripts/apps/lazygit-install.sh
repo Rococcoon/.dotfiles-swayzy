@@ -23,6 +23,7 @@ sudo install lazygit -D -t /usr/local/bin/ \
 
 # Clean up
 rm lazygit.tar.gz
+rm -rf lazygit
 
 # Verify installation
 if command -v lazygit >/dev/null 2>&1; then
