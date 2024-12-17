@@ -129,8 +129,26 @@ GOLD="\033[38;5;214m"
 SAPPHIRE="\033[38;5;67m"
 RESET="\033[0m"
 
+# Function to get git branch and status
+git_info() {
+  branch=$(git symbolic-ref --short HEAD 2>/dev/null || git rev-parse --short HEAD 2>/dev/null)
+  if [ -n "$branch" ]; then
+    status=$(git status --short 2>/dev/null)
+    if [[ -n "$status" ]]; then
+      echo "Branch: $branch (✗)"
+    else
+      echo "Branch: $branch (✔)"
+    fi
+  else
+    echo ""
+  fi
+}
+
+# Properly escape prompt assignment to handle PS1 formatting
+PROMPT_COMMAND='PS1="\[\033[38;5;217m\]\u@\h \[\033[38;5;217m\]\W $(git_info) \[\033[38;5;67m\]\$ \[\033[0m\]"'
+
 # Set up the Bash prompt with Git symbols and colors
-export PS1='\[\033[38;5;217m\]\u@\h \[\033[38;5;217m\]\W \[\033[38;5;67m\]$ '
+# export PS1='\[\033[38;5;217m\]\u@\h \[\033[38;5;217m\]\W \[\033[38;5;67m\]$ '
 
 # Alias to check battery power
 alias batman='cat /sys/class/power_supply/BAT0/capacity'
