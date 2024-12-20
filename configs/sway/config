@@ -265,7 +265,7 @@ exec_always ~/.config/sway/scripts/remap_caps.sh
 #
 # Set scaling for firefox
 #
-set $XFT.dpi 120
+# set $XFT.dpi 120
 
 #
 # test for keyboard
@@ -294,7 +294,7 @@ bindsym $mod+b exec "$HOME/.dotfiles-swayzy/scripts/bgswap.sh"
 #
 # Set XWayland scaling to 1.25x
 #
-output * scale 1.5
+# output * scale 1.5
 
 #
 # Turn off focus on hover
