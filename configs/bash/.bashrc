@@ -155,3 +155,7 @@ alias batman='cat /sys/class/power_supply/BAT0/capacity'
 
 # Alias to change wallpaper
 alias bgswap="$HOME/.dotfiles-swayzy/scripts/bgswap.sh"
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+. "$HOME/.cargo/env"

@@ -12,8 +12,8 @@
 #  - /path/to/alacritty.yml
 
 # import rose pine color scheme
-import:
-  - ~/.config/alacritty/alacritty/dist/rose-pine.yml
+# import:
+# - ~/.config/alacritty/alacritty/dist/rose-pine.yml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
