@@ -10,7 +10,7 @@ sudo apt update || { echo "Failed to update package index"; exit 1; }
 
 # Install necessary Wi-Fi tools
 echo "Installing required Wi-Fi packages..."
-sudo apt install -y iwd wireless-tools iw wpa_supplicant \
+sudo apt install -y iwd wireless-tools iw \
     || { echo "Failed to install Wi-Fi packages"; exit 1; }
 
 # Enable and start iwd service

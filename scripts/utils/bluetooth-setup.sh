@@ -10,7 +10,7 @@ sudo apt update || { echo "Failed to update package index"; exit 1; }
 
 # Install Bluetooth packages
 echo "Installing required Bluetooth packages..."
-sudo apt install -y blueman bluez bluetoothctl pulseaudio-module-bluetooth \
+sudo apt install -y blueman bluez pulseaudio-module-bluetooth \
     || { echo "Failed to install Bluetooth packages"; exit 1; }
 
 # Enable and start Bluetooth services

@@ -10,7 +10,7 @@ sudo apt update || { echo "Failed to update package index"; exit 1; }
 
 # Install PulseAudio, Pavucontrol, Alsa tools, and related packages
 echo "Installing required audio packages..."
-sudo apt install -y pulseaudio pavucontrol alsa-utils alsamixer pactl \
+sudo apt install -y pulseaudio pavucontrol alsa-utils \
     || { echo "Failed to install audio packages"; exit 1; }
 
 # Enable and start PulseAudio service
