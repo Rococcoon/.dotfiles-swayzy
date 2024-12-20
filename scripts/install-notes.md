@@ -13,6 +13,8 @@ gcc
 g++
 make
 ripgrep
+zathura
+htop
 
 # Manual install
 vial
