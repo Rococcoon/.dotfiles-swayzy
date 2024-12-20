@@ -14,7 +14,7 @@ set $down k
 set $up l
 set $right semicolon
 # Your preferred terminal emulator
-set $term alacritty
+set $term foot
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -43,7 +43,7 @@ bindsym $mod+Shift+x exec swaylock -f -i ~/.dotfiles-swayzy/wallpapers/sakura-ro
 # Example configuration:
 #
 exec swayidle -w \
-         timeout 600 'swaylock -f -c 000000' \
+         timeout 300 'swaylock -f -c 000000' \
          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
          before-sleep 'swaylock -f -i ~/.dotfiles-swayzy/wallpapers/sakura-rose-blur.png'
 #
@@ -266,6 +266,13 @@ exec_always ~/.config/sway/scripts/remap_caps.sh
 # Set scaling for firefox
 #
 set $XFT.dpi 120
+
+#
+# test for keyboard
+#
+input type:keyboard {
+  xkb_layout "us"
+}
 
 #
 # Set the default audio sink
