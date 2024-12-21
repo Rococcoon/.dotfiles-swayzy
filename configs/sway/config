@@ -9,10 +9,10 @@
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 # Home row direction keys, like vim
-set $left j
-set $down k
-set $up l
-set $right semicolon
+set $left a
+set $down s
+set $up d
+set $right f
 # Your preferred terminal emulator
 set $term alacritty
 # Your preferred application launcher
@@ -43,7 +43,7 @@ bindsym $mod+Shift+x exec swaylock -f -i ~/.dotfiles-swayzy/wallpapers/sakura-ro
 # Example configuration:
 #
 exec swayidle -w \
-         timeout 300 'swaylock -f -c 000000' \
+         timeout 500 'swaylock -f -i ~/.dotfiles-swayzy/wallpapers/sakura-rose-blur.png' \
          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
          before-sleep 'swaylock -f -i ~/.dotfiles-swayzy/wallpapers/sakura-rose-blur.png'
 #
@@ -76,7 +76,7 @@ exec swayidle -w \
     bindsym $mod+Shift+q kill
 
     # Start your launcher
-    bindsym $mod+d exec $menu
+    # bindsym $mod+d exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -86,7 +86,7 @@ exec swayidle -w \
     floating_modifier $mod normal
 
     # Reload the configuration file
-    bindsym $mod+Shift+c reload
+    bindsym $mod+Shift+r reload
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaymsg exit
@@ -152,21 +152,21 @@ exec swayidle -w \
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
-    bindsym $mod+s layout stacking
+    # bindsym $mod+s layout stacking
     # bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
+    # bindsym $mod+e layout toggle split
 
     # Make the current focus fullscreen
-    bindsym $mod+f fullscreen
+    # bindsym $mod+f fullscreen
 
     # Toggle the current focus between tiling and floating mode
-    bindsym $mod+Shift+f floating toggle
+    # bindsym $mod+Shift+f floating toggle
 
     # Swap focus between the tiling area and the floating area
-    bindsym $mod+space focus mode_toggle
+    bindsym $mod+tab focus mode_toggle
 
     # Move focus to the parent container
-    bindsym $mod+a focus parent
+    # bindsym $mod+a focus parent
 #
 # Scratchpad:
 #
@@ -211,7 +211,7 @@ bindsym $mod+r mode "resize"
 bar {
     position top
 
-    font pango:Mononoki Nerd Font 11
+    font pango:Mononoki Nerd Font Mono 11
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
