@@ -159,6 +159,12 @@ alias batman='cat /sys/class/power_supply/BAT0/capacity'
 # Alias to change wallpaper
 alias bgswap="$HOME/.dotfiles-swayzy/scripts/bgswap.sh"
 
+# Alias to launch melonDS
+alias melonds='flatpak run net.kuribo64.melonDS'
+
+# Alias to launch Steam
+alias steam='flatpak run com.valvesoftware.Steam'
+
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 . "$HOME/.cargo/env"
