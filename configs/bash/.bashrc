@@ -168,3 +168,6 @@ alias steam='flatpak run com.valvesoftware.Steam'
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 . "$HOME/.cargo/env"
+
+# Export path for golang
+export PATH=$PATH:/usr/local/go/bin
