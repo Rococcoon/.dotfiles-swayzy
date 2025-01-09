@@ -170,4 +170,4 @@ alias steam='flatpak run com.valvesoftware.Steam'
 . "$HOME/.cargo/env"
 
 # Export path for golang
-export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/home/lulu/.local/opt/go/bin

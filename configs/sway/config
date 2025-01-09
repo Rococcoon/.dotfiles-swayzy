@@ -44,7 +44,7 @@ bindsym $mod+Shift+x exec swaylock -f -i ~/.dotfiles-swayzy/wallpapers/sakura-ro
 #
 exec swayidle -w \
          timeout 1000 'swaylock -f -i ~/.dotfiles-swayzy/wallpapers/sakura-rose-blur.png' \
-         timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+         timeout 1500 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
          before-sleep 'swaylock -f -i ~/.dotfiles-swayzy/wallpapers/sakura-rose-blur.png'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
