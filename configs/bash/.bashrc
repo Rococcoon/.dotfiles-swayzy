@@ -170,6 +170,7 @@ alias steam='flatpak run com.valvesoftware.Steam'
 . "$HOME/.cargo/env"
 
 # Set up Emscripten
+export EMSDK_QUIET=1
 source /home/lulu/Applications/emsdk/emsdk_env.sh
 
 # Export path for golang
