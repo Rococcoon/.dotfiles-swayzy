@@ -169,5 +169,8 @@ alias steam='flatpak run com.valvesoftware.Steam'
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 . "$HOME/.cargo/env"
 
+# Set up Emscripten
+source /home/lulu/Applications/emsdk/emsdk_env.sh
+
 # Export path for golang
 export PATH=$PATH:/home/lulu/.local/opt/go/bin
