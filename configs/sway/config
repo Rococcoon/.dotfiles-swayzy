@@ -38,6 +38,11 @@ include /etc/sway/config-vars.d/*
 #
 bindsym $mod+Shift+x exec swaylock -f -i ~/.dotfiles-swayzy/wallpapers/sakura-rose-blur.png
 
+#
+# Power Menu
+#
+bindsym $mod+p exec alacritty -e bubblePowerMenu
+
 ### Idle configuration
 #
 # Example configuration:
