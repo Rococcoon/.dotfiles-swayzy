@@ -175,3 +175,6 @@ source /home/lulu/Applications/emsdk/emsdk_env.sh
 
 # Export path for golang
 export PATH=$PATH:/home/lulu/.local/opt/go/bin
+
+export EBITEN_GL_DRIVER=wayland
+alias tiled="QT_QPA_PLATFORM=xcb tiled"

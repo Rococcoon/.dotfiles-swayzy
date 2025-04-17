@@ -297,6 +297,11 @@ bindsym $mod+w exec brave-browser ---enable-features=UseOzonePlatform --ozone-pl
 bindsym $mod+b exec "$HOME/.dotfiles-swayzy/scripts/bgswap.sh"
 
 #
+# screenshoot
+#
+bindsym $mod+z exec grim -g "$(slurp)" ~/Pictures/screenshot.png
+
+#
 # Set XWayland scaling to 1.25x
 #
 # output * scale 1.5
