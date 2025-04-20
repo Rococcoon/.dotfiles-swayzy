@@ -165,6 +165,9 @@ alias melonds='flatpak run net.kuribo64.melonDS'
 # Alias to launch Steam
 alias steam='flatpak run com.valvesoftware.Steam'
 
+# Alias to lauch azahar
+alias azahar='flatpak run org.azahar_emu.Azahar'
+
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 . "$HOME/.cargo/env"
