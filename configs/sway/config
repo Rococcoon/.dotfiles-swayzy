@@ -9,10 +9,10 @@
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 # Home row direction keys, like vim
-set $left a
-set $down s
-set $up d
-set $right f
+set $left j
+set $down k
+set $up l
+set $right semicolon
 # Your preferred terminal emulator
 set $term alacritty
 # Your preferred application launcher
@@ -36,7 +36,7 @@ include /etc/sway/config-vars.d/*
 #
 # Sway lock
 #
-bindsym $mod+Shift+x exec swaylock -f -i ~/.dotfiles-swayzy/wallpapers/sakura-rose-blur.png
+bindsym $mod+Shift+x exec swaylock -f -i ~/.dotfiles-swayzy/wallpapers/diego-catto.jpg
 
 #
 # Power Menu
@@ -48,9 +48,9 @@ bindsym $mod+p exec alacritty -e bubblePowerMenu
 # Example configuration:
 #
 exec swayidle -w \
-         timeout 1000 'swaylock -f -i ~/.dotfiles-swayzy/wallpapers/sakura-rose-blur.png' \
+         timeout 1000 'swaylock -f -i ~/.dotfiles-swayzy/wallpapers/diego-catto.jpg' \
          timeout 1500 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-         before-sleep 'swaylock -f -i ~/.dotfiles-swayzy/wallpapers/sakura-rose-blur.png'
+         before-sleep 'swaylock -f -i ~/.dotfiles-swayzy/wallpapers/diego-catto.jpg'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -81,7 +81,7 @@ exec swayidle -w \
     bindsym $mod+Shift+q kill
 
     # Start your launcher
-    # bindsym $mod+d exec $menu
+    bindsym $mod+d exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -233,7 +233,7 @@ bar {
 #
 # Set background image on start
 #
-output * bg ~/.dotfiles-swayzy/wallpapers/sakura-rose.png fill
+output * bg ~/.dotfiles-swayzy/wallpapers/diego-catto.jpg fill
 
 #
 # Gaps
